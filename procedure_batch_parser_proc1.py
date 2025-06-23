@@ -347,7 +347,7 @@ def process_sql_file(
             completed_sql = normalize_data_types(completed_sql)
 
         output_file = output_dir / input_path.name
-        output_file.write_text(completed_sql + "\n/", encoding="utf-8")
+        output_file.write_text(completed_sql + "\n\n/\n", encoding="utf-8")
 
         all_sql_builder.append("-- ------------------------------\n")
         all_sql_builder.append(f"-- File: {input_path.name}\n")
